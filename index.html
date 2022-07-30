@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    body {
+      background-color: hsl(30, 38%, 92%);
+      width: 1440px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: auto;
+    }
+.left{
+  width: 20rem;
+}
+    #dimg {
+      border-top-left-radius: 1rem;
+      border-bottom-left-radius: 1rem;
+      /* height: 30rem;
+      width: 20rem; */
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+
+    }
+    #mimg{
+      height: 100%;
+      width: 100%;
+     object-fit: contain;
+      border-top-right-radius: 1rem;
+      border-top-left-radius: 1rem;
+
+    }
+
+    .right {
+      width: 20rem;
+      padding-left: 1rem;
+    }
+    .right h1+p {
+      font-weight: 700;
+    }
+
+    .font1 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+    }
+
+    .font2 {
+      font-family: 'Fraunces';
+      font-weight: 700;
+    }
+
+    .card {
+     
+      border-radius: 1rem;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40rem;
+
+    }
+
+    .cart {
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: hsl(158, 36%, 37%);
+      height: 40px;
+      width: 250px;
+      text-align: center;
+      border-radius: 5px;
+    }
+    .grow1{
+      flex-grow: 1;
+    }
+    .cart:hover{
+      background-color: hsl(160, 20%, 17%);
+      cursor: pointer;
+    }
+
+    .green {
+      color: hsl(158, 36%, 37%);
+      font-size: 2rem;
+    }
+    del{
+      color: black;
+      font-size: 14px;
+      padding: 8px 28px;
+    }
+    /* MEDIA QUERY */
+    @media screen and (max-width:480px) {
+    body{
+      width: 375px;
+      margin: auto;
+    }
+    .card{
+      flex-direction: column;
+margin-top: 1rem;      
+    }
+    #dimg {
+     display: none;
+    }
+    .left{
+      height: 269px;
+  width: 24rem;
+}
+.right{
+  width: 18rem;
+}
+}
+
+    
+    .right{
+      width: 20rem;
+      padding: 2rem;
+    }
+      
+    
+    @media screen and (min-width:480px) {
+      #mimg{
+      display: none;
+    }
+    }
+    
+   
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <div class="left">
+      <img  src="/image-product-mobile.jpg" id="mimg" alt="">
+      <img src="/image-product-desktop.jpg" id="dimg" alt="">
+    </div>
+    <div class="right">
+
+      <p class="font1">
+        Preview
+      </p>
+
+      <h1 class="font2">
+        Gabrielle Essence Eau De Parfum
+
+      </h1>
+      <p class="font1">
+        A floral, solar and voluptuous interpretation composed by Olivier Polge,
+        Perfumer-Creator for the House of CHANEL.
+      </p>
+
+      <p class="font2 green">
+        $149.99
+        <del class="font1 white">$169.99</del>
+      </p>
+
+      <span class="font1 cart">
+        <span class="grow1"></span>
+        <img src="/icon-cart.svg" alt="">
+        <span class="grow1"></span>
+        Add to Cart
+        <span class="grow1"></span>
+      </span>
+
+    </div>
+  </div>
+
+
+  <!-- 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+
+</html>
