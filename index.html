@@ -4,199 +4,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap" rel="stylesheet">
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap" rel="stylesheet">
 
-  <title>Frontend Mentor | Product preview card component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <title>Frontend Mentor | 3-column preview card component</title>
   <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-
     body {
-      background-color: hsl(30, 38%, 92%);
-      width: 1440px;
+      background-color: hsl(0, 0%, 95%);
+      font-family: 'Lexend Deca', sans-serif;
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 100vh;
-      margin: auto;
-    }
-.left{
-  width: 20rem;
-}
-    #dimg {
-      border-top-left-radius: 1rem;
-      border-bottom-left-radius: 1rem;
-      /* height: 30rem;
-      width: 20rem; */
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-
-    }
-    #mimg{
-      height: 100%;
-      width: 100%;
-     object-fit: contain;
-      border-top-right-radius: 1rem;
-      border-top-left-radius: 1rem;
-
+      justify-content: center;
+      font-size: 14px;
+      
     }
 
-    .right {
-      width: 20rem;
-      padding-left: 1rem;
-    }
-    .right h1+p {
+    h1 {
+      color: hsl(0, 0%, 95%);
+      font-family: 'Big Shoulders Display', cursive;
       font-weight: 700;
+      margin: 2rem 1rem;
+
     }
 
-    .font1 {
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 500;
+    button {
+      border: none;
+      padding: 1rem;
+      margin: 1rem;
+      text-align: center;
+      width: 8rem;
+      border-top-left-radius: 28px;
+      border-bottom-left-radius: 28px;
+      border-top-right-radius: 28px;
+      border-bottom-right-radius: 28px;
+
     }
 
-    .font2 {
-      font-family: 'Fraunces';
-      font-weight: 700;
+    button:hover {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white !important;
+    }
+
+    p {
+      color: hsla(0, 0%, 100%, 0.75);
+      margin: 2rem 1rem;
+
+    }
+    .box div  img{
+      margin: 2rem 1rem;
+    }
+
+    #sedans {
+      background-color: hsl(31, 77%, 52%);
+    }
+
+    #btn1 {
+      color: hsl(31, 77%, 52%);
+    }
+
+    #suvs {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    #btn2 {
+      color: hsl(184, 100%, 22%);
+    }
+
+    #luxury {
+      background-color: hsl(179, 100%, 13%);
+    }
+
+    #btn3 {
+      color: hsl(179, 100%, 13%);
     }
 
     .card {
-     
-      border-radius: 1rem;
-      background-color: white;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 40rem;
-
+      margin: 5rem 16rem;
     }
 
-    .cart {
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: hsl(158, 36%, 37%);
-      height: 40px;
-      width: 250px;
-      text-align: center;
-      border-radius: 5px;
-    }
-    .grow1{
-      flex-grow: 1;
-    }
-    .cart:hover{
-      background-color: hsl(160, 20%, 17%);
-      cursor: pointer;
+    .box {
+      padding: 2rem 2rem;
     }
 
-    .green {
-      color: hsl(158, 36%, 37%);
-      font-size: 2rem;
-    }
-    del{
-      color: black;
-      font-size: 14px;
-      padding: 8px 28px;
-    }
-    /* MEDIA QUERY */
     @media screen and (max-width:480px) {
-    body{
-      width: 375px;
-      margin: auto;
-    }
-    .card{
-      flex-direction: column;
-margin-top: 1rem;      
-    }
-    #dimg {
-     display: none;
-    }
-    .left{
-      height: 269px;
-  width: 24rem;
-}
-.right{
-  width: 18rem;
-}
-}
+      .card {
+        flex-direction: column;
+        margin: 1rem 16px;
+
+      }
+      .box{
+        padding: 1rem 8px;
+      }
+      body{width: 100vw;}
 
     
-    .right{
-      width: 20rem;
-      padding: 2rem;
+      p,h1{
+        margin: 2rem 0rem;
+      }
+
     }
-      
-    
-    @media screen and (min-width:480px) {
-      #mimg{
-      display: none;
-    }
-    }
-    
-   
   </style>
 </head>
 
 <body>
   <div class="card">
-    <div class="left">
-      <img  src="/image-product-mobile.jpg" id="mimg" alt="">
-      <img src="/image-product-desktop.jpg" id="dimg" alt="">
+
+    <div class="box" id="sedans">
+      <div class="icon">
+        <img src="/icon-sedans.svg" alt="">
+      </div>
+      <h1>Sedans</h1>
+      <p>
+        Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.
+      </p>
+      <button id="btn1" class="btn">Learn More</button>
     </div>
-    <div class="right">
 
-      <p class="font1">
-        Preview
+    <div class="box" id="suvs">
+      <div class="icon">
+        <img src="/icon-suvs.svg" alt="">
+      </div>
+      <h1> SUVs</h1>
+      <p>
+        Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.
       </p>
-
-      <h1 class="font2">
-        Gabrielle Essence Eau De Parfum
-
-      </h1>
-      <p class="font1">
-        A floral, solar and voluptuous interpretation composed by Olivier Polge,
-        Perfumer-Creator for the House of CHANEL.
-      </p>
-
-      <p class="font2 green">
-        $149.99
-        <del class="font1 white">$169.99</del>
-      </p>
-
-      <span class="font1 cart">
-        <span class="grow1"></span>
-        <img src="/icon-cart.svg" alt="">
-        <span class="grow1"></span>
-        Add to Cart
-        <span class="grow1"></span>
-      </span>
-
+      <button id="btn2" class="btn">Learn More</button>
     </div>
+
+    <div class="box" id="luxury">
+      <div class="icon">
+        <img src="/icon-luxury.svg" alt="">
+      </div>
+      <h1> Luxury</h1>
+      <p>
+        Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.
+      </p>
+      <button id="btn3" class="btn">Learn More</button>
+    </div>
+
   </div>
 
-
-  <!-- 
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 
 </html>
